@@ -65,16 +65,16 @@ class CustomHandler:
 def apost(flexcode, msg, when):
     headers = {
         'X-Requested-With': 'XMLHttpRequest',
-        'apikey': "5P43S420PVO07Q6D3VE0TTS0", #pagermon APIKey
+        'apikey': "****API KEY****", #pagermon APIKey
         'User-Agent': 'PagerMon pdw2pagermon.py',
     }
     params = {
         "address": flexcode,
         "message": msg,
         "datetime": when,
-        "source": "POZIVNIK 4",
+        "source": "****SOURCE****",
     }
-    requests.post('http://pager.pocsag112.org/api/messages', data=params, headers=headers)
+    requests.post('http://****YOUR_ADDRESS****/api/messages', data=params, headers=headers)
 
 async def main():
     handler = CustomHandler()
